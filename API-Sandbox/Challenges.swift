@@ -41,6 +41,19 @@ internal func exerciseOne() {
      
      */
     
+    let lastName = userData["results"][0]["name"]["last"].stringValue
+    let title = userData["results"][0]["name"]["title"].stringValue
+    let streetName = userData["results"][0]["location"]["street"].stringValue
+    let cityName = userData["results"][0]["location"]["city"].stringValue
+    let stateName = userData["results"][0]["location"]["state"].stringValue
+    let postalCode = userData["results"][0]["location"]["postcode"].intValue
+    let email = userData["results"][0]["email"].stringValue
+    let phoneNumber = userData["results"][0]["cell"].stringValue
+        
+    print("\(firstName) \(lastName) lives at \(streetName) in \(cityName), \(stateName), \(postalCode).")
+    print("If you want to contact \(title) \(lastName), you can email \(email) or")
+    print("call at \(phoneNumber).")
+    
     
     
     
